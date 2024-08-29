@@ -22,7 +22,7 @@ function Login() {
   const handleGoogleLogin = () => {
 
     // Handle Google login here
-    window.location.href = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/onebox";
+    window.location.href = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://pc-reachinbox-07.vercel.app/onebox";
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
