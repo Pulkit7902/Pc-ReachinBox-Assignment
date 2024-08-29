@@ -27,7 +27,7 @@ const SignUp = () => {
         return;
       }
       toast.success('Signed up successfully!');
-      navigate("/onebox");
+      navigate("/");
     } catch (error) {
       toast.error('An error occurred during sign-up.');
     }
@@ -35,7 +35,7 @@ const SignUp = () => {
 
   const handleGoogleLogin = () => {
     // Handle Google login here
-    window.location.href = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/";
+    window.location.href = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/onebox";
   };
 
   return (
@@ -45,13 +45,13 @@ const SignUp = () => {
         <form onSubmit={handleSubmit} className="">
           <div className="bg-black w-screen h-screen flex flex-col justify-center items-center">
             <div className="bg-[#111214] text-center space-y-10 px-16 rounded-2xl border border-[#343A40]">
-              <div className="">
-                <div className="text-xl text-white font-semibold mt-6 mb-3">
+              <div className="-mb-8">
+                <div className="text-xl text-white font-semibold mt-6 mb-6">
                   Create a new account
                 </div>
                 <div className=' justify-center align-center '>
                 <div className="mb-4 flex items-center justify-center text-md gap-2 min-w-[320px]">
-                  <label htmlFor="name" className="block relative right-10 text-gray-300 font-bold mb-2 mr-auto">
+                  <label htmlFor="name" className="w-12 block relative right-10 text-gray-300 font-bold mb-2 mr-auto">
                     Name:
                   </label>
                   <input
@@ -61,11 +61,11 @@ const SignUp = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full bg-transparent border-blue-500  text-white px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div className="mb-4 flex items-center justify-center text-md gap-2 min-w-[320px]">
-                  <label htmlFor="email" className="block relative right-10 text-gray-300 font-bold mb-2 mr-auto">
+                  <label htmlFor="email" className="w-12 block relative right-10 text-gray-300 font-bold mb-2 mr-auto">
                     Email:
                   </label>
                   <input
@@ -75,11 +75,11 @@ const SignUp = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full  bg-transparent border-blue-500  text-white px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
-                <div className="mb-4 flex items-center justify-center text-md gap-2 w-[320px]">
-                  <label htmlFor="password" className="block relative right-10 text-slate-200 font-bold mb-2">
+                <div className="mb-4 flex items-center justify-center text-md gap-2  ">
+                  <label htmlFor="w-14 password" className="w-12 border-blue-500  block relative right-10 text-slate-200 font-bold mb-2">
                     Password:
                   </label>
                   <input
@@ -89,14 +89,14 @@ const SignUp = () => {
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full  bg-transparent text-white border-blue-500 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 </div>
               </div>
               <div className="">
                 <button
-                onClick={handleSubmit}
+                
                   type="submit"
                   className="bg-gradient-to-r from-[#4B63DD] to-[#0524BFFC] mx-16 mt-5 px-6 text-sm py-3 rounded-md cursor-pointer mb-3"
                 >

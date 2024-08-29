@@ -245,7 +245,7 @@ const Mail = ({ fromEmail, toEmail, subject, body }) => {
             </div>
           </div>
           <div className='text-sm dark:text-[#7F7F7F] text-[#637381]'>
-            20 june 2022 : 9:16AM
+            28 Aug 2024 : 9:16AM
           </div>
         </div>
         <div

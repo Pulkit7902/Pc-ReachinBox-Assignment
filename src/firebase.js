@@ -31,3 +31,14 @@ export async function signupUser(email, password) {
         return { success: false, error: error.code || 'Some error occured...' }
     }
 }
+export async function loginUser(email, password) {
+    try {
+        localStorage.setItem('auth-type', 'user')
+        await signInWithEmailAndPassword(auth, email, password)
+        return { success: true }
+    } catch (error) {
+        localStorage.removeItem('auth-type')
+        return { success: false, error: error.code || 'Some error occured...' }
+    }
+}
+

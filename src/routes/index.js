@@ -10,16 +10,16 @@ const router = createBrowserRouter([
         element:<App/>,
         children:[
             {
-                path:"login",
-                element:<Login/>
+                path:"",
+                element:<SignUp/>
             },
             {
-                path:"",
+                path:"onebox",
                 element:<OneBox/>
             },
             {
-                path:"signup",
-                element:<SignUp/>
+                path:"login",
+                element:<Login/>
             }
     
 ]

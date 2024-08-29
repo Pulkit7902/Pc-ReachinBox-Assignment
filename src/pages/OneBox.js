@@ -13,7 +13,7 @@ function OneBox() {
 
   useEffect(() => {
     if (!token) {
-      navigate("/login");
+      // navigate("/signup");
     }
     if (token) {
       localStorage.setItem("token", `Bearer ${token}`);
